@@ -8,7 +8,6 @@ This project focuses on the automated detection and classification of **16 diffe
 * **Architecture:** ResNet50 with **Transfer Learning** (Pre-trained on ImageNet).
 * **Optimization:** Fine-tuned for real-world application with **Google Colab**.
 * **Data Integrity:** Implemented a robust preprocessing pipeline to handle **noisy datasets**, including folder name correction and normalization.
-* **Mobile Ready:** Model optimized and converted to **TensorFlow Lite (TFLite)** for edge deployment.
 
 ---
 
