@@ -33,12 +33,3 @@ The model exhibits high stability and generalization capabilities, even when fac
 
 ---
 
-## 📂 Project Structure
-```text
-├── graphs/               # Training/Validation Accuracy & Loss curves
-├── models/               # Best performing .h5 and .tflite models
-├── notebooks/            # Jupyter Notebooks for model training & testing
-│   ├── EE470_Building_The_Model.ipynb
-│   └── EE470_Model_Testing.ipynb
-├── reports/              # PDF versions of the Project Report & Presentation
-└──
