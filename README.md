@@ -1,5 +1,45 @@
-Plant Disease Classification using ResNet50 🌿Project OverviewThis project focuses on the automated detection and classification of 16 different types of plant diseases and health conditions using deep learning. Early detection is critical in agriculture to minimize yield loss and reduce economic damage caused by bacterial, viral, and fungal infections.The system leverages Transfer Learning with the ResNet50 architecture, utilizing weights pre-trained on ImageNet to extract robust features from leaf images.
-Technical PipelineArchitecture: ResNet50 base model with a custom classification head (Global Average Pooling + Dense Softmax layer).Data Preprocessing: Images resized to $224 \times 224$ pixels (RGB).Handling Noisy Data: A significant part of the project involved programmatically and manually correcting "noisy" real-world test data, including inconsistent folder labeling and typos.
-Training Configuration:Optimizer: Adam.Loss Function: Categorical Cross-Entropy.Regularization: Early Stopping (patience: 5 epochs) was implemented to prevent overfitting, stopping training at epoch 28.
-Performance & ResultsThe model demonstrated high stability and accuracy across various disease classes:Validation Accuracy: 96.52%.Test Accuracy (Noisy/Real-World Data): 84.83%.Class-Specific Success: Achieved near-perfect accuracy for classes like "Bacterial Floundering".
-Tech StackLanguage: PythonFrameworks: TensorFlow, Keras.Hardware: Trained using Google Colab.
+# 🌿 Plant Disease Classification with ResNet50
+
+This project focuses on the automated detection and classification of **16 different plant disease classes** and health conditions using Deep Learning. Developed as an **Industrial Engineering** project, it aims to minimize agricultural yield loss through early and accurate diagnosis.
+
+---
+
+## 🚀 Key Highlights
+* **Architecture:** ResNet50 with **Transfer Learning** (Pre-trained on ImageNet).
+* **Optimization:** Fine-tuned for real-world application with **Google Colab**.
+* **Data Integrity:** Implemented a robust preprocessing pipeline to handle **noisy datasets**, including folder name correction and normalization.
+* **Mobile Ready:** Model optimized and converted to **TensorFlow Lite (TFLite)** for edge deployment.
+
+---
+
+## 📊 Performance Analysis
+The model exhibits high stability and generalization capabilities, even when faced with challenging real-world data.
+
+| Metric | Result |
+| :--- | :--- |
+| **Validation Accuracy** | **96.52%** |
+| **Test Accuracy (Noisy Data)** | **84.83%** |
+| **Epochs to Converge** | 28 (Early Stopping Applied) |
+
+> **Note on Model Robustness:** The significant accuracy on the "Noisy" test set demonstrates the model's ability to handle domain shifts and inconsistent labeling found in field conditions.
+
+---
+
+## 🛠 Tech Stack
+* **Language:** `Python`
+* **Deep Learning Framework:** `TensorFlow` / `Keras`
+* **Architecture:** `ResNet50`
+* **Optimizer:** `Adam`
+* **Visualization:** `Matplotlib` & `Seaborn`
+
+---
+
+## 📂 Project Structure
+```text
+├── graphs/               # Training/Validation Accuracy & Loss curves
+├── models/               # Best performing .h5 and .tflite models
+├── notebooks/            # Jupyter Notebooks for model training & testing
+│   ├── EE470_Building_The_Model.ipynb
+│   └── EE470_Model_Testing.ipynb
+├── reports/              # PDF versions of the Project Report & Presentation
+└──
